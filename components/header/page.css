@@ -5,3 +5,15 @@ header{
 .container-header{
     height: 100%;
 }
+
+@media only screen and (max-width: 1400px) {
+    header{
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .container-header {
+      flex-direction: column;
+      gap: 20px;
+    }
+}

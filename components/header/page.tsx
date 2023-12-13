@@ -1,4 +1,5 @@
 import './page.css';
+import Image from 'next/image';
 
 import HeaderNav from './header-nav/page';
 
@@ -7,7 +8,7 @@ export default function Header(){
         <header className='bg-white'>
             <div className="container-global container-header flex justify-between items-center">
                 <div>
-                    <h1>Logo</h1>
+                    <Image src="/images/logo/logo-pep.png" alt='logo' width={200} height={0}></Image>
                 </div>
                 <div>
                     <HeaderNav/>

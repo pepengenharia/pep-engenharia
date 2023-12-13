@@ -1,3 +1,24 @@
 main{
     height: 100%;
 }
+
+.container-home{
+    height: calc(100% - 120px);
+}
+
+.container-img-home{
+    background-color: black;
+    background-image: url('../public/images/bg/bg-home.jpg');
+    background-position: center;
+    background-size: auto;
+    height: 100%;
+}
+
+.text-home-bg{
+    position: relative;
+    bottom: 220px;
+}
+
+h1{
+    letter-spacing: 1px;
+}

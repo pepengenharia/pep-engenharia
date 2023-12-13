@@ -6,11 +6,14 @@
   --background-color: #F4F4F4;
 }
 
-html,body {
-  background-color: var(--background-color);
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html,body {
+  background-color: var(--background-color);
   height: 100%;
 }
 
