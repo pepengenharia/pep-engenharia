@@ -1,0 +1,10 @@
+.container-splide-text{
+    background-color: blue;
+}
+
+@media only screen and (max-width: 1400px) {
+
+    .container-splide-text{
+        flex-direction: column;
+    }
+}
