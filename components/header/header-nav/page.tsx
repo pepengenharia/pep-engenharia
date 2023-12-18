@@ -26,8 +26,8 @@ export default function HeaderNav(){
             <a href="/pages/area-atuacao"><p className={`text-sm ${checkRouterSelected('area-atuacao')}`}>ÁREAS DE ATUAÇÃO</p></a>
             <a href="/pages/projetos-realizados"><p className={`text-sm ${checkRouterSelected('projetos-realizados')}`}>PROJETOS REALIZADOS</p></a>
             <a href="/pages/equipe"><p className={`text-sm ${checkRouterSelected('equipe')}`}>EQUIPE</p></a>
-            <a href=""><p className={`text-sm`}>TRABALHE CONOSCO</p></a>
-            <a href=""><p className={`text-sm`}>CONTATO</p></a>
+            <a href="/pages/trabalhe-conosco"><p className={`text-sm ${checkRouterSelected('trabalhe-conosco')}`}>TRABALHE CONOSCO</p></a>
+            <a href=""><p className={`text-sm ${checkRouterSelected('equipe')}`}>CONTATO</p></a>
         </nav>
     );
 }

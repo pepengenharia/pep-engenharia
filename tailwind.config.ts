@@ -17,7 +17,8 @@ const config: Config = {
         brand: {
           400: '#F4F4F4',
           401: '#640000',
-          402: '#EDAE49'
+          402: '#EDAE49',
+          403: '#F9EDCC'
         }
       }
     },
