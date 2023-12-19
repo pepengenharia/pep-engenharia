@@ -1,0 +1,47 @@
+form{
+    width: 40%;
+    min-width: 400px;
+    position: relative;
+    left: 50%;
+    top: -550px;
+    height: 600px;
+}
+
+.container-info{
+    height: 500px;
+    padding: 0 80px;
+}
+
+input, textarea{
+    border-bottom: 3px solid black;
+    border-radius: 2px;
+}
+
+button{
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 5px 0;
+    width: 25%;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    form{
+        top: auto;
+        left: auto;
+        width: 80%;
+        position: static;
+        margin: 0 auto;
+        margin-top: 50px;
+        min-width: 200px;
+    }
+
+    button{
+        width: 40%;
+    }
+
+    .container-info{
+        width: 80%;
+        margin: 0 auto;
+    }
+}

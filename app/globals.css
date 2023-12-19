@@ -24,3 +24,10 @@ html,body {
 h1{
   letter-spacing: 1px;
 }
+
+@media only screen and (max-width: 1200px) {
+
+  .container-global{
+    padding: 0 3%;
+  }
+}

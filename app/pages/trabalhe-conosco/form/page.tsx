@@ -11,7 +11,15 @@ export default function TrabalheConoscoForm(){
 
     const onsubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        console.log(formData)
+        fetch(process.env.URL_API + 'mail',{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                fromMail: 'leonardojbpellegrino@gmail.com'
+              }),
+        });
     }
 
     return (
