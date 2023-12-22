@@ -16,13 +16,13 @@ export default function AreaAtuacao() {
           Fundada em 1995 com P&P Desenhos e Apoio Técnico Ltda, a empresa passou a se chamar Pellegrino & Pellegrino Projetos e Apoio Técnico Ltda em 22 de Setembro de 1999, usando o nome fantasia P&P. Com Ubirajara Pellegrino e Marcello Pellegrino como principais fundadores, garantimos segurança e compromisso na prestação de serviços no treinamento contínuo da equipe.
         </p>
         <h2 className="text-xl font-bold">Nossas áreas de atuação são:</h2>
-        {
-          areasDeAtuacao.map((areaDeAtuacao: IareaDeAtuacaoCardProps) => {
-            return <AreaDeAtuacaoCard pathImage={areaDeAtuacao.pathImage} alt={areaDeAtuacao.alt} textoAreaDeAtuacao={areaDeAtuacao.textoAreaDeAtuacao}/>
-          })
-        }
-        
-        <img src="" alt="" />
+        <div className="">
+          {
+            areasDeAtuacao.map((areaDeAtuacao: IareaDeAtuacaoCardProps) => {
+              return <AreaDeAtuacaoCard key={areaDeAtuacao?.id} pathImage={areaDeAtuacao.pathImage} alt={areaDeAtuacao.alt} textoAreaDeAtuacao={areaDeAtuacao.textoAreaDeAtuacao}/>
+            })
+          }
+        </div>
       </div>
       <Footer/>
     </main>
