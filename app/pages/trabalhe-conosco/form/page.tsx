@@ -6,6 +6,7 @@ import { formDataValue } from './data';
 import handleChange from '../../../../core/handleChangeForm';
 import { sendMail } from '../../../../core/sendMail';
 import { EnumAreaInteresse } from './ENUM';
+import validateForm from '../../../../core/validateForm';
 
 export default function TrabalheConoscoForm(){
 
@@ -13,6 +14,10 @@ export default function TrabalheConoscoForm(){
 
     const onsubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+        if(!validateForm(formData)){
+            alert('Preencha todos os campos antes de enviar o formulario!');
+            return;
+        }
         const fromMail = formData.email;
         const bodyMail = `
             O usuario ${formData.nomeCompleto} de e-mail ${formData.email}, telefone ${formData.telefone} entrou em contato pela página "trabalhe conosco" no site.
@@ -21,6 +26,8 @@ export default function TrabalheConoscoForm(){
             ${formData.mensagem}
         `;
         sendMail(fromMail,bodyMail,'E-mail trabalhe conosco Site P&P');
+        alert('E-mail enviado com sucesso!');
+        setFormData(formDataValue);
     }
 
     return (

@@ -5,6 +5,7 @@ import { formDataValue } from './data';
 
 import handleChange from '../../../../core/handleChangeForm';
 import { sendMail } from '../../../../core/sendMail';
+import validateForm from '../../../../core/validateForm';
 
 export default function ContatoForm(){
 
@@ -12,6 +13,10 @@ export default function ContatoForm(){
 
     const onsubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+        if(!validateForm(formData)){
+            alert('Preencha todos os campos antes de enviar o formulario!');
+            return;
+        }
         const fromMail = formData.email;
         const bodyMail = `
             O usuario ${formData.nomeCompleto} de e-mail ${formData.email}, entrou em contato pela página "contato" no site.
@@ -19,6 +24,8 @@ export default function ContatoForm(){
             ${formData.mensagem}
         `;
         sendMail(fromMail,bodyMail, 'E-mail contato Site P&P');
+        alert('E-mail enviado com sucesso!');
+        setFormData(formDataValue);
     }
 
     return (
