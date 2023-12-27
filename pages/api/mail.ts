@@ -31,7 +31,7 @@ export default function handler(
 
   const mailOptions = {
     from: process.env.EMAIL,
-    to: 'leonardopellegrinoo@gmail.com',
+    to: process.env.TO_MAIL,
     subject: req.body.subjectMail,
     text: req.body.bodyMail,
   };
