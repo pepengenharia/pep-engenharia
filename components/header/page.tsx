@@ -8,7 +8,7 @@ export default function Header(){
         <header className='bg-white'>
             <div className="container-global container-header flex justify-between items-center">
                 <div>
-                    <Image src="/images/logo/logo-pep.png" alt='logo' width={200} height={0}></Image>
+                    <a href="/"><Image src="/images/logo/logo-pep.png" alt='logo' width={200} height={0}></Image></a>
                 </div>
                 <div>
                     <HeaderNav/>

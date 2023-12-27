@@ -8,9 +8,10 @@ main{
 
 .container-img-home{
     background-color: black;
-    background-image: url('../public/images/bg/bg-home.jpg');
+    background-image: url('../public/images/bg/bg-home.png');
     background-position: center;
-    background-size: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 100%;
 }
 
