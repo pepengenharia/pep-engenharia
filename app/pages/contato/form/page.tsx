@@ -4,6 +4,7 @@ import { FormEvent, useState } from 'react';
 import { formDataValue } from './data';
 
 import handleChange from '../../../../core/handleChangeForm';
+import { sendMail } from '../../../../core/sendMail';
 
 export default function ContatoForm(){
 
@@ -11,15 +12,13 @@ export default function ContatoForm(){
 
     const onsubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        fetch(process.env.URL_API + 'mail',{
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
-                fromMail: 'leonardojbpellegrino@gmail.com'
-              }),
-        });
+        const fromMail = formData.email;
+        const bodyMail = `
+            O usuario ${formData.nomeCompleto} de e-mail ${formData.email}, entrou em contato pela página "contato" no site.
+
+            ${formData.mensagem}
+        `;
+        sendMail(fromMail,bodyMail, 'E-mail contato Site P&P');
     }
 
     return (

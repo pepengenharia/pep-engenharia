@@ -4,6 +4,8 @@ import { FormEvent, useState } from 'react';
 import { formDataValue } from './data';
 
 import handleChange from '../../../../core/handleChangeForm';
+import { sendMail } from '../../../../core/sendMail';
+import { EnumAreaInteresse } from './ENUM';
 
 export default function TrabalheConoscoForm(){
 
@@ -11,15 +13,14 @@ export default function TrabalheConoscoForm(){
 
     const onsubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        fetch(process.env.URL_API + 'mail',{
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
-                fromMail: 'leonardojbpellegrino@gmail.com'
-              }),
-        });
+        const fromMail = formData.email;
+        const bodyMail = `
+            O usuario ${formData.nomeCompleto} de e-mail ${formData.email}, telefone ${formData.telefone} entrou em contato pela página "trabalhe conosco" no site.
+            Area de interesse: ${formData.areaInteresse}
+
+            ${formData.mensagem}
+        `;
+        sendMail(fromMail,bodyMail,'E-mail trabalhe conosco Site P&P');
     }
 
     return (
@@ -35,10 +36,10 @@ export default function TrabalheConoscoForm(){
 
             <label className="font-bold my-2" htmlFor="areaInteresse">Area de interesse <strong className="text-red-600">*</strong></label>
             <select value={formData.areaInteresse} onChange={(change) => handleChange(change,setFormData)} className="inputDefault bg-brand-403 rounded p-2 outline-0" name="areaInteresse">
-                <option value={1}>Desenhista</option>
-                <option value={2}>Projetista</option>
-                <option value={3}>Desenhista/Projetista</option>
-                <option value={4}>Engenheiro</option>
+                <option value={EnumAreaInteresse.UM}>Desenhista</option>
+                <option value={EnumAreaInteresse.DOIS}>Projetista</option>
+                <option value={EnumAreaInteresse.TRES}>Desenhista/Projetista</option>
+                <option value={EnumAreaInteresse.QUATRO}>Engenheiro</option>
             </select>
 
             <label className="font-bold my-4" htmlFor="mensagem">Mensagem <strong className="text-red-600">*</strong></label>
