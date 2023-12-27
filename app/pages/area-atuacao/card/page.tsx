@@ -11,7 +11,7 @@ export default function AreaDeAtuacaoCard(areaDeAtuacaoCardProps: IareaDeAtuacao
     return(
         <div className="my-10">
             <Image src={areaDeAtuacaoCardProps.pathImage} width={500} height={500} alt={areaDeAtuacaoCardProps.alt}/>
-            <p className="my-5">{areaDeAtuacaoCardProps.textoAreaDeAtuacao}</p>
+            <p className="mb-5 text-lg font-semibold">{areaDeAtuacaoCardProps.textoAreaDeAtuacao}</p>
         </div>
     );
 }
