@@ -10,7 +10,7 @@ export default function Splide(){
             <center>
                 <div className="max-2xl:flex-col max-2xl:justify-center flex">
                     <div>
-                        <Image src={"/images/bg/bg-home.jpg"} width={800} height={0} alt=""></Image>
+                        <Image src={"/images/bg/bg-tubulacao.jpg"} width={800} height={0} alt=""></Image>
                     </div>
                     <div className="flex flex-col items-center text-white w-2/5 px-5 max-2xl:w-full max-2xl:my-5 max-2xl:px-20">
                         <h2 className="text-2xl font-bold">Lorem Ipsum</h2>
@@ -22,7 +22,7 @@ export default function Splide(){
             <center>
                 <div className="max-2xl:flex-col max-2xl:justify-center flex">
                     <div>
-                        <Image src={"/images/bg/bg-home.jpg"} width={800} height={0} alt=""></Image>
+                        <Image src={"/images/bg/bg-tubulacao.jpg"} width={800} height={0} alt=""></Image>
                     </div>
                     <div className="flex flex-col items-center text-white w-2/5 px-5 max-2xl:w-full max-2xl:my-5 max-2xl:px-20">
                         <h2 className="text-2xl font-bold">Lorem Ipsum</h2>
@@ -34,7 +34,7 @@ export default function Splide(){
             <center>
                 <div className="max-2xl:flex-col max-2xl:justify-center flex">
                     <div>
-                        <Image src={"/images/bg/bg-home.jpg"} width={800} height={0} alt=""></Image>
+                        <Image src={"/images/bg/bg-tubulacao.jpg"} width={800} height={0} alt=""></Image>
                     </div>
                     <div className="flex flex-col items-center text-white w-2/5 px-5 max-2xl:w-full max-2xl:my-5 max-2xl:px-20">
                         <h2 className="text-2xl font-bold">Lorem Ipsum</h2>
