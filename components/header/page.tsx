@@ -1,7 +1,10 @@
 import './page.css';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 
-import HeaderNav from './header-nav/page';
+import SkeletonHeaderNav from './header-nav/skeleton/page';
+
+const DynamicHeaderNav = dynamic(() => import('./header-nav/page'), {ssr: false, loading: () => <SkeletonHeaderNav/>});
 
 export default function Header(){
     return(
@@ -11,7 +14,7 @@ export default function Header(){
                     <a href="/"><Image src="/images/logo/logo-pep.png" alt='logo' width={200} height={0}></Image></a>
                 </div>
                 <div>
-                    <HeaderNav/>
+                    <DynamicHeaderNav/>
                 </div>
             </div>
         </header>

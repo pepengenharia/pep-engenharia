@@ -7,7 +7,7 @@ export interface IareaDeAtuacaoCardProps{
     alt: string;
 }
 
-export default function AreaDeAtuacaoCard(areaDeAtuacaoCardProps: IareaDeAtuacaoCardProps){
+export default function AreaDeAtuacaoCard(areaDeAtuacaoCardProps: any){
     return(
         <div className="my-10">
             <Image src={areaDeAtuacaoCardProps.pathImage} width={500} height={500} alt={areaDeAtuacaoCardProps.alt}/>
