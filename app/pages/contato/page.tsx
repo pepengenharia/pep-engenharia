@@ -13,10 +13,10 @@ export default function Contato(){
                 <div className="container-info flex justify-between bg-brand-401 text-white rounded">
                     <div className="infoTexto flex flex-col justify-center">
                         <h1>Ligue para nós</h1>
-                        <p>(xx) xxxx-xxxx</p>
+                        <p>(31) 3224-2628</p>
                         <br />
                         <h1>Localização</h1>
-                        <p>Rua da Bahia no. 573 – 14o. Andar</p>
+                        <p>Rua da Bahia no. 573 – 14º. Andar</p>
                         <br />
                         <h1>Horário comercial</h1>
                         <p>Seg - Sex: 08 à 18h</p>
